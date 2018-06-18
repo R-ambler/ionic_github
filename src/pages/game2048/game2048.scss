@@ -1,0 +1,31 @@
+page-game2048 {
+  ion-grid {
+    //width: 80%;
+    //height: 80%;
+    //background-color: #bbada0;
+  }
+  .card{
+    background-color: #f2b179;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 10;
+    font-size: 28px;
+    border: 2px solid;
+    color: #f9f6f2;
+    line-height: 65px;
+  }
+  .hideText{
+    color: #f2b179;
+  }
+  .div-footer{
+    display: flex;
+    justify-content: center;
+  }
+  .div-footer button{
+    height: 35px;
+    width: 60%;
+    background: #f2b179;
+    color: #f9f6f2;
+  }
+}

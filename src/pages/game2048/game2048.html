@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>2048</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding (swipeleft)="swipeLeftEvent($event)"
+             (swiperight)="swipeRightEvent($event)"
+             (swipeup)="swipeUpEvent($event)"
+             (swipedown)="swipeDownEvent($event)">
+  <h1><span class="scoreTitle">Score:&nbsp;</span><span class="scoreVal">{{score}}</span></h1>
+  <ion-grid>
+    <ion-row *ngFor="let row of cards">
+      <ion-col class="card" col-3 *ngFor="let col of row">
+        <span [ngClass]="{'hideText':col==0}">{{col}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <div class="div-footer">
+    <button ion-button (click)="init()">再来一局</button>
+  </div>
+</ion-footer>
